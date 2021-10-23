@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+	    
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="Tarot Readings" />
+	<meta name="author" content="Let It Go Tarot" />
+	<title>Let It Go - Tarot Cards</title>
+	<link rel="icon" type="image/x-icon" href="../assets/img/LogoTransparent.png" />
+    <link rel="stylesheet" href="style.css">
+	<link href="booking_form.css" rel="stylesheet">
+	<link href="custom.css" rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	
+	  <!-- BootstrapValidator JS -->
+	  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+	 
+	 <script src="https://www.paypal.com/sdk/js?client-id=AcNvlQlQ58A_8dZ-OIUNhg4WnTiNdW3gHDwKYjBPItA5KFvsnztF4JK1EEIz9_aHWQzygVQJcq0aNNX0&currency=GBP" data-sdk-integration-source="button-factory"></script>	  
+  </head>
+  <body id="bookings">
+												
+	<a href="../index.html">
+		<img id="logo" src="../assets/img/LogoTransparent.png" alt="Let It Go" width="70" height="70" style="float:left; margin-right:10px;">
+	</a>
+	<div class="row">
+		<div class="content">
+	            <div class="col-xl-10 offset-xl-1">
+				<div class="form-group">
+					Thank you for choosing to book a private reading with
+				</div>
+				<div class="row justify-content-center">
+					<div class="welcome" style="float: none; margin: 0 auto;">
+						<h1 id="title" class="text-uppercase">Let It Go Tarot</h1>
+					</div>
+				</div>	
+				</br>
+                <form id="booking-form" method="post" role="form">
+					<div class="form-group">
+					Standard reading format is through a video recording via private youtube link, which expires after 1 month.</br>
+					Please select the type of reading below and provide the background to your question, which you want spirits guides to answer.</br>
+					</div>
+					<input type="hidden" id="email" name="email">
+					
+                    <div class="messages"></div>
+
+                    <div class="controls">
+					    <div class="row">
+						    <div class="col-lg-6">
+								<div class="form-group">
+									<label class="control-label">Reading Type *</label>
+									<select class="form-select form-control" name="readingType" id="readingType" aria-label="Default select example">
+									  <option value="1">3 cards spread, 15min: £30</option>
+									  <option value="2">Celtic spread, 30min: £60</option>
+									  <option value="3">You and them spread, 30min: £60 </option>
+									</select>
+								</div>
+                            </div>
+							<div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email2" name="email2" class="form-control" placeholder="email" required="required"
+										data-error="Email is required." />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="form_name">Name</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name" />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="form_zodiac">Zodiac sign</label>
+                                    <input id="form_zodiac" type="text" name="zodiac" class="form-control" placeholder="Please enter your zodiac sign" />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form_message">Question/Problem *</label>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Please enter your question or problem " rows="4" required="required"
+                                data-error="Please, leave us a message."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <!--<div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="6LeDMiwaAAAAADDLxfwr-vj2L1BbkhCaPRStckGW" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                            <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                            <div class="help-block with-errors"></div>-->
+							
+						<div class="form-group">
+							Once the payment is made, please allow between 2 and 7 days for the reading to be send to you. Thank you.
+						</div>
+						<div class="form-group" id="paypal-conintener">
+							<button class="btn btn-success btn-send" id="btn-paypal" class="btn btn-primary mb-2" disabled>PayPal</button>
+						</div>
+						<div class="form-group" id="paypal-conintener">
+						<div id="smart-button-container">
+							<div style="text-align: center;">
+							<div id="paypal-button-container"></div>
+						  </div>
+						</div>
+                    </div>
+                </form>
+				<div id="success-box" style="display: none;"><h3>The request has been saved successfully.</h3></div>
+            </div>	
+	</div>
+	
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js'></script>
+<script src="validator.js"></script>
+<script src="contact.js"></script>
+
+</body>
+
+
+
+</html>
