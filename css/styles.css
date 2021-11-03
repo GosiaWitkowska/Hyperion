@@ -2500,12 +2500,12 @@ fieldset:disabled a.btn {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #548b87;
+  background-color: #BE81F7;
   border-color: #4f837f;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #548b87;
+  background-color: #BE81F7;
   border-color: #4f837f;
   box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0.5);
 }
@@ -10250,7 +10250,7 @@ body {
   
 }
 #sub_button:hover {
-  background-color: #548b87;
+  background-color: #BE81F7;
   text-decoration: none;
 }
 #sub_button:focus, .btn.focus {
