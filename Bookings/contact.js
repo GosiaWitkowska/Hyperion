@@ -37,21 +37,16 @@ $(function () {
 			var name = $("#form_name").val();
 			
 			Email.send({
-				SecureToken : "dcb07cb7-1ff5-4a55-ba12-70afa765ab5e",
+				SecureToken : "5fc26fd3-80f2-4723-b310-26e1c34b0239",
 				To : details.payer.email_address,
-				From : "letitgotarot@gmail.com",
+				From : "hyperiontarot@gmail.com",
 				Subject : "Personal Rading from Let It Go Tarot.",
-				Body : `<html><h2>Dear ${name},</h2><strong>Thank you for ordering your personal reading.</br> Please allow between 2 and 7 days for the reading to be send to you.</strong><p><em> Best Wishes,</em></p><p><em> Let It Go Tarot.</em></p><p><strong> www.letitgotarot.com</strong></p></html>`,
-				Attachments : [
-					{
-						name : "LogoLetItGoSmall.jpg",
-						path : "https://www.letitgotarot.com/assets/img/LogoLetItGoSmall.jpg"
-					}]
+				Body : `<html><h2>Dear ${name},</h2><strong>Thank you for ordering your personal reading.</br> Please allow between 2 and 7 days for the reading to be send to you.</strong><p><em> Best Wishes,</em></p><p><em> Let It Go Tarot.</em></p><p><strong> www.hyperiontarot.com</strong></p></html>`,
 			});
 			Email.send({
-				SecureToken : "dcb07cb7-1ff5-4a55-ba12-70afa765ab5e",
-				To : "letitgotarot@gmail.com",
-				From : "letitgotarot@gmail.com",
+				SecureToken : "5fc26fd3-80f2-4723-b310-26e1c34b0239",
+				To : "hyperiontarot@gmail.com",
+				From : "hyperiontarot@gmail.com",
 				Subject : `Personal Reading for ${details.payer.email_address}`,
 				Body : `Personal reading ordered for ${details.payer.email_address}`
 			});
